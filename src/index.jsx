@@ -4,7 +4,7 @@ import Rate from './components/Rate';
 import './style.css';
 
 const App = () => {
-  const [currency, setCurrency] = useState('USD');
+  const [currency, setCurrency] = useState('EUR');
 
   const handleCurrencyChange = (e) => {
     setCurrency(e.target.value);
@@ -28,7 +28,8 @@ const App = () => {
             </select>
           </div>
         </form>
-        <Rate />
+
+        <Rate from={currency} />
       </div>
     </div>
   );
